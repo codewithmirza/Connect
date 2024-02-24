@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "443635509548",
+    "project_id": "connect-gsc",
+    "storage_bucket": "connect-gsc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443635509548:android:774c8dd9140753fc34e489",
+        "android_client_info": {
+          "package_name": "conect.page.connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw47HmqW6bpn26aIeUhxjj_xiLIbHYQC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
