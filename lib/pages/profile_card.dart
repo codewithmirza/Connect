@@ -161,7 +161,7 @@ class _ProfileCardState extends State<ProfileCard> {
                         ? MemoryImage(_imageBytes!)
                         : widget.profileImageUrl != null
                         ? NetworkImage(widget.profileImageUrl!)
-                        : const NetworkImage('https://images.pexels.com/photos/19829656/pexels-photo-19829656/free-photo-of-flowers-in-vase-on-table-near-curtain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load') as ImageProvider,
+                        : const AssetImage("assets/images/profile_picture.jpg") as ImageProvider,
                     backgroundColor: Colors.red,
                   ),
                 ),

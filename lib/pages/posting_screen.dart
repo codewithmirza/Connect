@@ -95,7 +95,7 @@ class _PostingScreenState extends State<PostingScreen> {
                   radius: 20, // Adjust size as needed
                   backgroundImage: widget.profileImageUrl != null
                       ? NetworkImage(widget.profileImageUrl!) // Use the profile image URL if available
-                      : const NetworkImage('https://images.pexels.com/photos/19829656/pexels-photo-19829656/free-photo-of-flowers-in-vase-on-table-near-curtain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load') as ImageProvider,
+                      : const AssetImage("assets/images/profile_picture.jpg") as ImageProvider,
                 ),
                 Expanded(
                   child: Padding(
