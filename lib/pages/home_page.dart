@@ -29,9 +29,14 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         color: const Color(0xFF00A8FF),
         animationDuration: const Duration(milliseconds: 300),
-        items: const [
+        items: [
           Icon(Icons.home),
-          Icon(Icons.travel_explore),
+          Image.asset(
+            "assets/images/connect-icon.png",
+            width: 40,
+            height: 40,
+            color: Theme.of(context).colorScheme.primary,
+          ),
           Icon(Icons.location_on),
         ],
         onTap: (index) {

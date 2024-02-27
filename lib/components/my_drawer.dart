@@ -22,12 +22,13 @@ class MyDrawer extends StatelessWidget {
           Column(
             children: [
               // Logo
-              const DrawerHeader(
+               DrawerHeader(
                 child: Center(
-                  child: Icon(
-                    Icons.travel_explore,
-                    color: Colors.black,
-                    size: 40,
+                  child: Image.asset(
+                    "assets/images/connect-icon.png",
+                    width: 60,
+                    height: 60,
+                    color: const Color(0xFF00A8FF),
                   ),
                 ),
               ),
