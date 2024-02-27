@@ -40,11 +40,15 @@ class RegisterPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 100,
+              ),
               //logo
-              Icon(
-                Icons.travel_explore,
-                size: 60,
-                color: Theme.of(context).colorScheme.primary,
+              Image.asset(
+                "assets/images/connect-icon.png",
+                width: 60,
+                height: 60,
+                color: const Color(0xFF00A8FF),
               ),
               const SizedBox(
                 height: 50,

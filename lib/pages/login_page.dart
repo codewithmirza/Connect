@@ -40,11 +40,12 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //logo
-            Icon(
-              Icons.travel_explore,
-              size: 60,
-              color: Theme.of(context).colorScheme.primary,
-            ), // Corrected
+            Image.asset(
+              "assets/images/connect-icon.png",
+              width: 60,
+              height: 60,
+              color: const Color(0xFF00A8FF),
+            ),// Corrected
             const SizedBox(
               height: 50,
             ),
