@@ -5,10 +5,10 @@ class MyButton extends StatelessWidget {
   final VoidCallback onTap;
 
   const MyButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +25,14 @@ class MyButton extends StatelessWidget {
               color: Colors.black.withOpacity(0.3),
               spreadRadius: 2,
               blurRadius: 3,
-              offset: Offset(0, 2), // changes position of shadow
+              offset: const Offset(0, 2), // changes position of shadow
             ),
           ],
         ),
         child: Center(
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
               fontWeight: FontWeight.bold,

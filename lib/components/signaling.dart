@@ -31,7 +31,7 @@ class Signaling {
 
   Signaling() {
     FirebaseFirestore.instance.settings =
-        Settings(persistenceEnabled: false);
+        const Settings(persistenceEnabled: false);
   }
 
   StreamStateCallback? onAddRemoteStream;
@@ -170,23 +170,21 @@ class Signaling {
 
     await roomsCollection.doc(roomId).delete();
 
-    if (usersCollection != null) {
-      CollectionReference users =
-      FirebaseFirestore.instance.collection('Users');
-      await users
-          .where('isIncoming', isEqualTo: true)
-          .get()
-          .then((value) async {
-        if (value.docs.isNotEmpty) {
-          for (DocumentSnapshot doc in value.docs) {
-            if (doc['calleeId'] == myUserId) {
-              await doc.reference.update({'isIncoming': false});
-            }
+    CollectionReference users =
+    FirebaseFirestore.instance.collection('Users');
+    await users
+        .where('isIncoming', isEqualTo: true)
+        .get()
+        .then((value) async {
+      if (value.docs.isNotEmpty) {
+        for (DocumentSnapshot doc in value.docs) {
+          if (doc['calleeId'] == myUserId) {
+            await doc.reference.update({'isIncoming': false});
           }
         }
-      });
-    }
-
+      }
+    });
+  
     localStream!.dispose();
     remoteStream?.dispose();
   }
